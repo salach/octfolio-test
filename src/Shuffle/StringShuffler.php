@@ -3,10 +3,6 @@ namespace Octfolio\Shuffle;
 
 use Exception;
 
-$dir = dirname(__DIR__, 2);
-echo $dir.'/vendor';
-
-require $dir.'/vendor/autoload.php';
 /**
  * Shuffles strings
  */

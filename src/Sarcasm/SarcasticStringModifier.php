@@ -16,15 +16,18 @@ class SarcasticStringModifier
      */
     public function convert(string $subject):string
     {
-        $subject = 'hello world';
         $return= "";
-        foreach(explode(" ",$subject) as $array) {
+
             try {
-                throw new Exception();
+                foreach(explode(" ",$subject) as $array){
+                    foreach(str_split($array) as $key=>$value) {
+                        $return .= ($key+1)%2!=0  ? mb_strtoupper($value) : $value;
+                    }
+                    $return .= " ";
+                }
             } catch (Exception $e) {
-                print "The string is not a valid character";
+
             }
-        }
 
         return rtrim($return, ". ");
     }
