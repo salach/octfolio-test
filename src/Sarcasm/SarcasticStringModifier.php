@@ -1,6 +1,8 @@
 <?php
 namespace Octfolio\Sarcasm;
 
+use Exception;
+
 /**
  * A class that provides ways to determine sarcasm
  */
@@ -14,6 +16,15 @@ class SarcasticStringModifier
      */
     public function convert(string $subject):string
     {
-        throw new \Exception("Not yet implemented");
+        $subject = 'hello world';
+        $return= "";
+        foreach(explode(" ",$subject) as $array) {
+            try {
+                throw new Exception();
+            } catch (Exception $e) {
+                print "The string is not a valid character";
+            }
+        }
+        return rtrim($return, ". ");
     }
 }
