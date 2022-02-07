@@ -57,6 +57,7 @@ class StringShuffler
         }catch (Exception $e) {
             print "The input is an empty string";
         }
+
         return $output;
     }
 }

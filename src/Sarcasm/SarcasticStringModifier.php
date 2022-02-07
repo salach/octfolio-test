@@ -25,6 +25,7 @@ class SarcasticStringModifier
                 print "The string is not a valid character";
             }
         }
+
         return rtrim($return, ". ");
     }
 }
